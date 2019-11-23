@@ -1,6 +1,7 @@
 import { StyleProp, TextStyle } from 'react-native';
 
 import { DefaultTheme } from 'styled-components';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { SFC } from 'react';
 import { StackNavigationProp } from '@react-navigation/stack';
 
@@ -11,18 +12,23 @@ export interface User {
 }
 
 type StackParamList = {
+  default: undefined;
   Intro: { userId: string };
   Temp: undefined;
+  StackNavigator: undefined;
+  DrawerNavigator: undefined;
+  BottomTabNavigator: undefined;
+  MaterialBottomTabNavigator: undefined;
+  MaterialTopTabNavigator: undefined;
 };
 
 export type DefaultNavigationProps<
   T extends keyof StackParamList
 > = StackNavigationProp<StackParamList, T>;
 
-export interface ScreenProps {
-  theme: DefaultTheme;
-  changeThemeType: Function;
-}
+export type DefaultDrawerNavigationProps<
+  T extends keyof StackParamList
+> = DrawerNavigationProp<StackParamList, T>;
 
 export enum ThemeType {
   LIGHT = 'LIGHT',
