@@ -48,57 +48,55 @@ interface Props {
 }
 
 function Intro(props: Props): React.ReactElement {
-  let timer: number;
-  const { state, setUser } = useAppContext();
   const { changeThemeType } = useThemeContext();
-  const [isLoggingIn, setIsLoggingIn] = React.useState<boolean>(false);
-
-  const onLogin = (): void => {
-    setIsLoggingIn(true);
-    timer = setTimeout(() => {
-      const user: User = {
-        displayName: 'dooboolab',
-        age: 30,
-        job: 'developer',
-      };
-      setUser(user);
-      setIsLoggingIn(false);
-      clearTimeout(timer);
-    }, 1000);
-  };
 
   return (
     <Container>
-      <ContentWrapper>
-        <StyledText
-          style={{
-            marginTop: 100,
-          }}
-        >
-          {state.user ? state.user.displayName : ''}
-        </StyledText>
-        <StyledText>{state.user ? state.user.age : ''}</StyledText>
-        <StyledText>{state.user ? state.user.job : ''}</StyledText>
-      </ContentWrapper>
       <ButtonWrapper>
-        <Button
-          testID="btn1"
-          imgLeftSrc={IC_MASK}
-          isLoading={isLoggingIn}
-          onClick={(): void => onLogin()}
-          text={getString('LOGIN')}
-        />
         <View style={{ marginTop: 8 }} />
         <Button
-          testID="btn2"
-          onClick={(): void => props.navigation.navigate('Temp')}
-          text={getString('NAVIGATE')}
+          testID="btnStack"
+          style={{
+            marginBottom: 8,
+          }}
+          onClick={(): void => props.navigation.navigate('StackNavigator')}
+          text="Stack Navigator"
         />
-        <View style={{ marginTop: 8 }} />
         <Button
-          testID="btn3"
-          onClick={(): void => changeThemeType()}
-          text={getString('CHANGE_THEME')}
+          testID="btnDrawer"
+          style={{
+            marginBottom: 8,
+          }}
+          onClick={(): void => props.navigation.navigate('DrawerNavigator')}
+          text="Drawer Navigator"
+        />
+        <Button
+          testID="btnTabs"
+          style={{
+            marginBottom: 8,
+          }}
+          onClick={(): void => props.navigation.navigate('BottomTabNavigator')}
+          text="BottomTab Navigator"
+        />
+        <Button
+          testID="btnTabs"
+          style={{
+            marginBottom: 8,
+          }}
+          onClick={(): void =>
+            props.navigation.navigate('MaterialTopTabNavigator')
+          }
+          text="MaterialTopTab Navigator"
+        />
+        <Button
+          testID="btnTabs"
+          style={{
+            marginBottom: 8,
+          }}
+          onClick={(): void =>
+            props.navigation.navigate('MaterialBottomTabNavigator')
+          }
+          text="MaterialBottomTab Navigator"
         />
       </ButtonWrapper>
     </Container>
