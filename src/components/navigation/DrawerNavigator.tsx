@@ -1,4 +1,8 @@
-import { DrawerItem, createDrawerNavigator } from '@react-navigation/drawer';
+import {
+  DrawerContentComponentProps,
+  DrawerItem,
+  createDrawerNavigator,
+} from '@react-navigation/drawer';
 import React, { ReactElement } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 
@@ -53,7 +57,7 @@ function CustomDrawerContent({ drawerPosition, navigation }): ReactElement {
 function Navigator(): ReactElement {
   return (
     <Drawer.Navigator
-      drawerContent={(props): ReactElement => (
+      drawerContent={(props: DrawerContentComponentProps): ReactElement => (
         <CustomDrawerContent {...props} />
       )}
     >
