@@ -8,7 +8,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 const Tab = createMaterialTopTabNavigator();
 
-function Navigator(): ReactElement {
+function SwitchNavigator(): ReactElement {
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -28,4 +28,4 @@ function Navigator(): ReactElement {
   );
 }
 
-export default Navigator;
+export default SwitchNavigator;

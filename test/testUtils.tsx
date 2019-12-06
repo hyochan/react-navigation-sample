@@ -12,7 +12,7 @@ export const createTestElement = (
   <RootProvider initialThemeType={themeType}>{child}</RootProvider>
 );
 
-export const createTestProps = (obj: object): object | unknown | any => ({
+export const createTestProps = (obj?: object): object | unknown | any => ({
   navigation: {
     navigate: jest.fn(),
     goBack: jest.fn(),

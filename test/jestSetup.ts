@@ -1,4 +1,5 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, View } from 'react-native';
+
 /**
  * monkey patching the locale to avoid the error:
  * Something went wrong initializing the native ReactLocalization module
@@ -7,3 +8,7 @@ import { NativeModules } from 'react-native';
 import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock';
 
 jest.mock('@react-native-community/async-storage', () => mockAsyncStorage);
+
+jest.mock('react-native-reanimated', () =>
+  require('react-native-reanimated/mock'),
+);

@@ -22,7 +22,7 @@ const TabBarIcon = (focused: boolean): React.ReactElement => {
   );
 };
 
-function Navigator(): ReactElement {
+function MaterialBottomTabNavigator(): ReactElement {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -44,4 +44,4 @@ function Navigator(): ReactElement {
   );
 }
 
-export default Navigator;
+export default MaterialBottomTabNavigator;
