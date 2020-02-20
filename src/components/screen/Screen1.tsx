@@ -15,9 +15,9 @@ const Container = styled.View`
 `;
 
 const StyledText = styled.Text`
-  font-size: 16;
+  font-size: 16px;
   color: blue;
-  margin-bottom: 8;
+  margin-bottom: 8px;
 `;
 
 interface Props {

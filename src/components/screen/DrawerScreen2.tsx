@@ -15,9 +15,9 @@ const Container = styled.View`
 `;
 
 const StyledText = styled.Text`
-  font-size: 24;
+  font-size: 24px;
   color: blue;
-  margin-bottom: 8;
+  margin-bottom: 8px;
 `;
 
 function Page(): ReactElement {

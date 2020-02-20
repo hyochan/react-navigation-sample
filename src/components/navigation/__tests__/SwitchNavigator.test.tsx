@@ -3,7 +3,7 @@ import 'react-native';
 import React, { ReactElement } from 'react';
 import { createTestElement, createTestProps } from '../../../../test/testUtils';
 
-import { NavigationNativeContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import SwitchNavigator from '../SwitchNavigator';
 import { cleanup } from '@testing-library/react-native';
 import { enableScreens } from 'react-native-screens';

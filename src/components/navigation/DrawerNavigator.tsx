@@ -1,6 +1,7 @@
 import {
   DrawerContentComponentProps,
   DrawerItem,
+  DrawerNavigationProp,
   createDrawerNavigator,
 } from '@react-navigation/drawer';
 import React, { ReactElement } from 'react';
@@ -10,7 +11,15 @@ import DrawerScreen1 from '../screen/DrawerScreen1';
 import DrawerScreen2 from '../screen/DrawerScreen2';
 import { useSafeArea } from 'react-native-safe-area-context';
 
-const Drawer = createDrawerNavigator();
+export type DrawerParamList = {
+  default: undefined;
+};
+
+export type DrawerNavigationProps<
+  T extends keyof DrawerParamList = 'default'
+> = DrawerNavigationProp<DrawerParamList, T>;
+
+const Drawer = createDrawerNavigator<DrawerParamList>();
 
 const styles = StyleSheet.create({
   container: {

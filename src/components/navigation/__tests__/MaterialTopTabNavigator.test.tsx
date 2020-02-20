@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import { createTestElement, createTestProps } from '../../../../test/testUtils';
 
 import MaterialTopTabNavigator from '../MaterialTopTabNavigator';
-import { NavigationNativeContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { cleanup } from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
 
@@ -15,9 +15,9 @@ describe('[MaterialTopTab] navigator', () => {
   beforeEach(() => {
     props = createTestProps();
     component = createTestElement(
-      <NavigationNativeContainer>
+      <NavigationContainer>
         <MaterialTopTabNavigator {...props} />
-      </NavigationNativeContainer>,
+      </NavigationContainer>,
     );
   });
 

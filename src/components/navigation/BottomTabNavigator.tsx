@@ -1,3 +1,4 @@
+import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { ReactElement } from 'react';
 
 import { IC_MASK } from '../../utils/Icons';
@@ -6,9 +7,16 @@ import Screen1 from '../screen/Screen1';
 import Screen2 from '../screen/Screen2';
 import Screen3 from '../screen/Screen3';
 import Screen4 from '../screen/Screen4';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Tab = createBottomTabNavigator();
+export type BottomTabParamList = {
+  default: undefined;
+};
+
+export type BottomTabNavigationProps<
+  T extends keyof BottomTabParamList = 'default'
+> = BottomTabNavigationProp<BottomTabParamList, T>;
+
+const Tab = createBottomTabNavigator<BottomTabParamList>();
 
 const TabBarIcon = (focused: boolean): React.ReactElement => {
   return (

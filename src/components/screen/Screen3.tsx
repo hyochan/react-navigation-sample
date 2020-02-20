@@ -13,7 +13,7 @@ const Container = styled.View`
 `;
 
 const StyledText = styled.Text`
-  font-size: 16;
+  font-size: 16px;
   color: blue;
 `;
 
