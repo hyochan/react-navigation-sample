@@ -67,6 +67,7 @@ describe('[ThemeProvider] interactions', () => {
     act(() => {
       fireEvent.press(getByTestId('BUTTON'));
     });
+
     expect(JSON.parse(text.children[0] as string)).toStrictEqual(
       ThemeType.DARK,
     );
@@ -100,6 +101,7 @@ describe('[ThemeProvider] interactions', () => {
     act(() => {
       fireEvent.press(getByTestId('BUTTON'));
     });
+
     expect(JSON.parse(text.children[0] as string)).toStrictEqual(
       ThemeType.LIGHT,
     );

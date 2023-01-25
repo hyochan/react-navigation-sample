@@ -1,9 +1,9 @@
-import { StyleProp, TextStyle } from 'react-native';
+import type { StyleProp, TextStyle } from 'react-native';
 
 import { DefaultTheme } from 'styled-components';
-import { DrawerNavigationProp } from '@react-navigation/drawer';
-import { SFC } from 'react';
-import { StackNavigationProp } from '@react-navigation/stack';
+import type { DrawerNavigationProp } from '@react-navigation/drawer';
+import type { SFC } from 'react';
+import type { StackNavigationProp } from '@react-navigation/stack';
 
 export interface User {
   displayName: string;
@@ -22,13 +22,11 @@ type StackParamList = {
   MaterialTopTabNavigator: undefined;
 };
 
-export type DefaultNavigationProps<
-  T extends keyof StackParamList
-> = StackNavigationProp<StackParamList, T>;
+export type DefaultNavigationProps<T extends keyof StackParamList> =
+  StackNavigationProp<StackParamList, T>;
 
-export type DefaultDrawerNavigationProps<
-  T extends keyof StackParamList
-> = DrawerNavigationProp<StackParamList, T>;
+export type DefaultDrawerNavigationProps<T extends keyof StackParamList> =
+  DrawerNavigationProp<StackParamList, T>;
 
 export enum ThemeType {
   LIGHT = 'LIGHT',

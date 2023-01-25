@@ -1,5 +1,5 @@
 import Button from '../shared/Button';
-import { DefaultNavigationProps } from '../../types';
+import type { DefaultNavigationProps } from '../../types';
 import React from 'react';
 import styled from 'styled-components/native';
 

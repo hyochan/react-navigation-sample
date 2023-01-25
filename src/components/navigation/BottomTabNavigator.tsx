@@ -1,19 +1,24 @@
-import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import React, { ReactElement } from 'react';
-
+import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { IC_MASK } from '../../utils/Icons';
 import { Image } from 'react-native';
+import React from 'react';
+import type { ReactElement } from 'react';
 import Screen1 from '../screen/Screen1';
 import Screen2 from '../screen/Screen2';
 import Screen3 from '../screen/Screen3';
 import Screen4 from '../screen/Screen4';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export type BottomTabParamList = {
   default: undefined;
+  Screen1: undefined;
+  Screen2: undefined;
+  Screen3: undefined;
+  Screen4: undefined;
 };
 
 export type BottomTabNavigationProps<
-  T extends keyof BottomTabParamList = 'default'
+  T extends keyof BottomTabParamList = 'default',
 > = BottomTabNavigationProp<BottomTabParamList, T>;
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();

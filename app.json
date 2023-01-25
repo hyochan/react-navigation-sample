@@ -1,6 +1,6 @@
 {
-  "name": "dooboo",
-  "displayName": "dooboo",
+  "name": "ReactNavigationV6",
+  "displayName": "ReactNavigationV6",
   "entryPoint": "index.js",
   "packagerOpts": {
     "assetExts": ["ttf", "png"],

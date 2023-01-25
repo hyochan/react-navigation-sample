@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { DefaultTheme } from 'styled-components';
+import type { DefaultTheme } from 'styled-components';
 import { ThemeProvider as OriginalThemeProvider } from 'styled-components/native';
 import { ThemeType } from '../types';
 import createCtx from '../utils/createCtx';
@@ -11,6 +11,7 @@ interface Context {
   themeType: ThemeType;
   changeThemeType: () => void;
 }
+
 const [useCtx, Provider] = createCtx<Context>();
 
 export const defaultThemeType: ThemeType = ThemeType.LIGHT;

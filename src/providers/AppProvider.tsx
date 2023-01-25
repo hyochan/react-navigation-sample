@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 
-import { User } from '../types';
+import type { User } from '../types';
 import createCtx from '../utils/createCtx';
 
 interface Context {
@@ -8,6 +8,7 @@ interface Context {
   setUser: (user: User) => void;
   resetUser: () => void;
 }
+
 const [useCtx, Provider] = createCtx<Context>();
 
 export enum ActionType {
@@ -44,14 +45,14 @@ interface Props {
 
 type Reducer = (state: State, action: Action) => State;
 
-const setUser = (dispatch: React.Dispatch<SetUserAction>) => (
-  user: User,
-): void => {
-  dispatch({
-    type: ActionType.SetUser,
-    payload: user,
-  });
-};
+const setUser =
+  (dispatch: React.Dispatch<SetUserAction>) =>
+  (user: User): void => {
+    dispatch({
+      type: ActionType.SetUser,
+      payload: user,
+    });
+  };
 
 const resetUser = (dispatch: React.Dispatch<ResetUserAction>) => (): void => {
   dispatch({

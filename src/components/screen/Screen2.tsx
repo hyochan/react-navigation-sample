@@ -1,6 +1,7 @@
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
+import React from 'react';
 
-import { DefaultNavigationProps } from '../../types';
+import type { DefaultNavigationProps } from '../../types';
 import styled from 'styled-components/native';
 
 const Container = styled.View`

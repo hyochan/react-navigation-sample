@@ -1,6 +1,7 @@
 import 'react-native';
 
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
+import React from 'react';
 import { createTestElement, createTestProps } from '../../../../test/testUtils';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -21,6 +22,7 @@ describe('[Switch] navigator', () => {
 
   it('should renders without crashing', () => {
     jest.useFakeTimers();
+
     const rendered = renderer.create(component).toJSON();
     jest.runAllTimers();
     expect(rendered).toMatchSnapshot();

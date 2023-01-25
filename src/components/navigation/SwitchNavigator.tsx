@@ -1,4 +1,7 @@
-import { NativeStackNavigationProp, createNativeStackNavigator } from '@react-navigation/native-stack';
+import {
+  NativeStackNavigationProp,
+  createNativeStackNavigator,
+} from '@react-navigation/native-stack';
 
 import BottomTabNavigator from './BottomTabNavigator';
 import DrawerNavigator from './DrawerNavigator';
@@ -14,6 +17,7 @@ const Stack = createNativeStackNavigator();
 
 function RootNavigator(): React.ReactElement {
   const { theme } = useThemeContext();
+
   return (
     <NavigationContainer>
       <Stack.Navigator

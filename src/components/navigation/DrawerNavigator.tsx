@@ -1,23 +1,24 @@
-import {
+import type {
   DrawerContentComponentProps,
-  DrawerItem,
   DrawerNavigationProp,
-  createDrawerNavigator,
 } from '@react-navigation/drawer';
-import React, { ReactElement } from 'react';
+import { DrawerItem, createDrawerNavigator } from '@react-navigation/drawer';
 import { ScrollView, StyleSheet } from 'react-native';
 
 import DrawerScreen1 from '../screen/DrawerScreen1';
 import DrawerScreen2 from '../screen/DrawerScreen2';
+import React from 'react';
+import type { ReactElement } from 'react';
 import { useSafeArea } from 'react-native-safe-area-context';
 
 export type DrawerParamList = {
   default: undefined;
+  DrawerScreen1: undefined;
+  DrawerScreen2: undefined;
 };
 
-export type DrawerNavigationProps<
-  T extends keyof DrawerParamList = 'default'
-> = DrawerNavigationProp<DrawerParamList, T>;
+export type DrawerNavigationProps<T extends keyof DrawerParamList = 'default'> =
+  DrawerNavigationProp<DrawerParamList, T>;
 
 const Drawer = createDrawerNavigator<DrawerParamList>();
 
@@ -27,7 +28,10 @@ const styles = StyleSheet.create({
   },
 });
 
-function CustomDrawerContent({ drawerPosition, navigation }): ReactElement {
+function CustomDrawerContent({
+  drawerPosition,
+  navigation,
+}: any): ReactElement {
   const insets = useSafeArea();
 
   return (
@@ -66,8 +70,9 @@ function CustomDrawerContent({ drawerPosition, navigation }): ReactElement {
 function Navigator(): ReactElement {
   return (
     <Drawer.Navigator
+      // eslint-disable-next-line react/no-unstable-nested-components
       drawerContent={(props: DrawerContentComponentProps): ReactElement => (
-        <CustomDrawerContent {...props} />
+        <CustomDrawerContent drawerPosition={undefined} {...props} />
       )}
     >
       <Drawer.Screen name="DrawerScreen1" component={DrawerScreen1} />

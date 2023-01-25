@@ -1,7 +1,8 @@
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
+import React from 'react';
 
 import Button from '../shared/Button';
-import { DefaultDrawerNavigationProps } from '../../types';
+import type { DefaultDrawerNavigationProps } from '../../types';
 import styled from 'styled-components/native';
 import { useNavigation } from '@react-navigation/core';
 
@@ -22,6 +23,7 @@ const StyledText = styled.Text`
 
 function Page(): ReactElement {
   const navigation = useNavigation() as DefaultDrawerNavigationProps<'default'>;
+
   return (
     <Container>
       <StyledText testID="myText">Screen 1</StyledText>

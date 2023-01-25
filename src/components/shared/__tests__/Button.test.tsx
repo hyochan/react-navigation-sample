@@ -2,12 +2,8 @@ import 'react-native';
 
 import * as React from 'react';
 
-import {
-  RenderResult,
-  act,
-  fireEvent,
-  render,
-} from '@testing-library/react-native';
+import type { RenderResult } from '@testing-library/react-native';
+import { act, fireEvent, render } from '@testing-library/react-native';
 
 import Button from '../Button';
 import { ThemeProvider } from 'styled-components/native';
@@ -28,6 +24,7 @@ describe('[Button]', () => {
       onClick: (): number => cnt++,
       testID: 'btn',
     };
+
     component = (
       <ThemeProvider theme={createTheme(ThemeType.LIGHT)}>
         <Button {...props} />

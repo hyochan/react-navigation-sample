@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
-
 import Button from '../shared/Button';
-import { DefaultNavigationProps } from '../../types';
+import type { DefaultNavigationProps } from '../../types';
+import React from 'react';
+import type { ReactElement } from 'react';
 import styled from 'styled-components/native';
 import { useNavigation } from '@react-navigation/core';
 
@@ -26,6 +26,7 @@ interface Props {
 
 function Page(): ReactElement {
   const navigation = useNavigation();
+
   return (
     <Container>
       <StyledText testID="myText">Screen 1</StyledText>

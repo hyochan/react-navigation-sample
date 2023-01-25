@@ -1,4 +1,5 @@
-import { DefaultNavigationProps, User } from '../../types';
+import type { DefaultNavigationProps } from '../../types';
+import { User } from '../../types';
 
 import Button from '../shared/Button';
 import { IC_MASK } from '../../utils/Icons';
