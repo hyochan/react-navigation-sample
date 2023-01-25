@@ -1,9 +1,7 @@
 import Button from '../shared/Button';
-import type { DefaultNavigationProps } from '../../types';
 import React from 'react';
 import type { ReactElement } from 'react';
 import styled from 'styled-components/native';
-import { useNavigation } from '@react-navigation/core';
 
 const Container = styled.View`
   flex: 1;
@@ -20,19 +18,13 @@ const StyledText = styled.Text`
   margin-bottom: 8px;
 `;
 
-interface Props {
-  navigation: DefaultNavigationProps<'default'>;
-}
-
 function Page(): ReactElement {
-  const navigation = useNavigation();
-
   return (
     <Container>
       <StyledText testID="myText">Screen 1</StyledText>
       <Button
         testID="btn3"
-        onClick={(): void => navigation.navigate('Screen2')}
+        // onClick={(): void => navigation.navigate('Screen2')}
         text="Navigate to screen2"
       />
     </Container>

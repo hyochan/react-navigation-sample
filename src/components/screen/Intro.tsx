@@ -1,14 +1,8 @@
-import type { DefaultNavigationProps } from '../../types';
-import { User } from '../../types';
-
 import Button from '../shared/Button';
-import { IC_MASK } from '../../utils/Icons';
+import type { DefaultNavigationProps } from '../../types';
 import React from 'react';
 import { View } from 'react-native';
-import { getString } from '../../../STRINGS';
 import styled from 'styled-components/native';
-import { useAppContext } from '../../providers/AppProvider';
-import { useThemeContext } from '../../providers/ThemeProvider';
 
 const Container = styled.View`
   flex: 1;
@@ -22,14 +16,6 @@ const Container = styled.View`
   overflow: hidden;
 `;
 
-const ContentWrapper = styled.View`
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
 const ButtonWrapper = styled.View`
   position: absolute;
   flex-direction: column;
@@ -38,19 +24,11 @@ const ButtonWrapper = styled.View`
   align-self: center;
 `;
 
-const StyledText = styled.Text`
-  font-size: 18px;
-  line-height: 27px;
-  color: ${({ theme }): string => theme.fontColor};
-`;
-
 interface Props {
   navigation: DefaultNavigationProps<'Intro'>;
 }
 
 function Intro(props: Props): React.ReactElement {
-  const { changeThemeType } = useThemeContext();
-
   return (
     <Container>
       <ButtonWrapper>

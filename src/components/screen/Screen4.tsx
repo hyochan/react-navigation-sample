@@ -1,7 +1,5 @@
-import type { ReactElement } from 'react';
 import React from 'react';
-
-import type { DefaultNavigationProps } from '../../types';
+import type { ReactElement } from 'react';
 import styled from 'styled-components/native';
 
 const Container = styled.View`
@@ -17,10 +15,6 @@ const StyledText = styled.Text`
   font-size: 16px;
   color: white;
 `;
-
-interface Props {
-  navigation: DefaultNavigationProps<'default'>;
-}
 
 function Page(): ReactElement {
   return (
