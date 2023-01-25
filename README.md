@@ -1,4 +1,4 @@
-# React Navigation v5 Examples
+# React Navigation v6 Examples
 
 ### StackNavigator
 
