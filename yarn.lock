@@ -1839,9 +1839,10 @@
     wcwidth "^1.0.1"
     ws "^1.1.0"
 
-"@react-native-community/masked-view@git+https://git@github.com/dulmandakh/react-native-masked-view.git#remove-android-support":
-  version "0.1.1"
-  resolved "git+https://git@github.com/dulmandakh/react-native-masked-view.git#955340b468ae95b7787983ed9b3f6928525007d9"
+"@react-native-community/masked-view@^0.1.11":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.11.tgz#2f4c6e10bee0786abff4604e39a37ded6f3980ce"
+  integrity sha512-rQfMIGSR/1r/SyN87+VD8xHHzDYeHaJq6elOSCAD+0iLagXkSI2pfA0LmSXP21uw5i3em7GkkRjfJ8wpqWXZNw==
 
 "@react-navigation/bottom-tabs@^5.0.6":
   version "5.0.6"
