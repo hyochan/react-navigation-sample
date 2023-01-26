@@ -1,8 +1,7 @@
+import type {IconType} from './src/types';
+
 declare module '*.svg' {
-
-import { IconType } from './src/types';
-
-const content: IconType;
+  const content: IconType;
   export default content;
 }
 

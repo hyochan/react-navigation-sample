@@ -2,14 +2,14 @@ import type {
   DrawerContentComponentProps,
   DrawerNavigationProp,
 } from '@react-navigation/drawer';
-import { DrawerItem, createDrawerNavigator } from '@react-navigation/drawer';
-import { ScrollView, StyleSheet } from 'react-native';
+import {DrawerItem, createDrawerNavigator} from '@react-navigation/drawer';
+import {ScrollView, StyleSheet} from 'react-native';
 
 import DrawerScreen1 from '../screen/DrawerScreen1';
 import DrawerScreen2 from '../screen/DrawerScreen2';
 import React from 'react';
-import type { ReactElement } from 'react';
-import { useSafeArea } from 'react-native-safe-area-context';
+import type {ReactElement} from 'react';
+import {useSafeArea} from 'react-native-safe-area-context';
 
 export type DrawerParamList = {
   default: undefined;
@@ -28,10 +28,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function CustomDrawerContent({
-  drawerPosition,
-  navigation,
-}: any): ReactElement {
+function CustomDrawerContent({drawerPosition, navigation}: any): ReactElement {
   const insets = useSafeArea();
 
   return (
@@ -43,8 +40,7 @@ function CustomDrawerContent({
           paddingRight: drawerPosition === 'right' ? insets.right : 0,
         },
       ]}
-      style={styles.container}
-    >
+      style={styles.container}>
       <DrawerItem
         label="Screen1"
         onPress={(): void => {
@@ -73,8 +69,7 @@ function Navigator(): ReactElement {
       // eslint-disable-next-line react/no-unstable-nested-components
       drawerContent={(props: DrawerContentComponentProps): ReactElement => (
         <CustomDrawerContent drawerPosition={undefined} {...props} />
-      )}
-    >
+      )}>
       <Drawer.Screen name="DrawerScreen1" component={DrawerScreen1} />
       <Drawer.Screen name="DrawerScreen2" component={DrawerScreen2} />
     </Drawer.Navigator>

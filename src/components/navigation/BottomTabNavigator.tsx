@@ -1,13 +1,13 @@
-import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { IC_MASK } from '../../utils/Icons';
-import { Image } from 'react-native';
+import type {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import {IC_MASK} from '../../utils/Icons';
+import {Image} from 'react-native';
 import React from 'react';
-import type { ReactElement } from 'react';
+import type {ReactElement} from 'react';
 import Screen1 from '../screen/Screen1';
 import Screen2 from '../screen/Screen2';
 import Screen3 from '../screen/Screen3';
 import Screen4 from '../screen/Screen4';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 export type BottomTabParamList = {
   default: undefined;
@@ -39,15 +39,14 @@ function MaterialBottomTabNavigator(): ReactElement {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarIcon: ({ focused }): React.ReactElement => TabBarIcon(focused),
-      }}
-    >
+        tabBarIcon: ({focused}): React.ReactElement => TabBarIcon(focused),
+      }}>
       <Tab.Screen
         name="Screen1"
         component={Screen1}
         options={{
           tabBarLabel: 'Screen1',
-          tabBarIcon: ({ focused }): React.ReactElement => TabBarIcon(focused),
+          tabBarIcon: ({focused}): React.ReactElement => TabBarIcon(focused),
         }}
       />
       <Tab.Screen name="Screen2" component={Screen2} />

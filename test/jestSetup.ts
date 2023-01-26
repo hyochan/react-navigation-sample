@@ -1,4 +1,4 @@
-import { NativeModules, View } from 'react-native';
+import {NativeModules, View} from 'react-native';
 
 /**
  * monkey patching the locale to avoid the error:

@@ -1,5 +1,5 @@
-import type { DefaultTheme } from 'styled-components';
-import { ThemeType } from './types';
+import type {DefaultTheme} from 'styled-components';
+import {ThemeType} from './types';
 
 const colors = {
   skyBlue: '#069ccd',

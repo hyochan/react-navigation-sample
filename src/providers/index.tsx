@@ -1,7 +1,7 @@
-import { AppProvider } from './AppProvider';
+import {AppProvider} from './AppProvider';
 import React from 'react';
-import { ThemeProvider } from './ThemeProvider';
-import { ThemeType } from '../types';
+import {ThemeProvider} from './ThemeProvider';
+import {ThemeType} from '../types';
 
 interface Props {
   initialThemeType?: ThemeType;
@@ -18,8 +18,7 @@ const RootProvider = ({
       <ThemeProvider
         initialThemeType={
           initialThemeType === ThemeType.LIGHT ? ThemeType.LIGHT : undefined
-        }
-      >
+        }>
         {children}
       </ThemeProvider>
     </AppProvider>

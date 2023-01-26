@@ -1,6 +1,4 @@
-/* eslint-disable */
-const { defaults: tsJestConfig } = require('ts-jest/presets');
-/* eslint-enable */
+const {defaults: tsJestConfig} = require('ts-jest/presets');
 
 module.exports = {
   ...tsJestConfig,
@@ -10,9 +8,7 @@ module.exports = {
     './node_modules/react-native-gesture-handler/jestSetup.js',
   ],
   transformIgnorePatterns: [
-    /* eslint-disable */
     'node_modules/(?!(.*-)?react-(.*-)?native(-.*)?|@react-native-community|@dooboo-ui/native)',
-    /* eslint-enable */
   ],
   globals: {
     'ts-jest': {

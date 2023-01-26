@@ -1,9 +1,8 @@
-import type { StyleProp, TextStyle } from 'react-native';
+import type {StyleProp, TextStyle} from 'react-native';
 
-import { DefaultTheme } from 'styled-components';
-import type { DrawerNavigationProp } from '@react-navigation/drawer';
-import type { SFC } from 'react';
-import type { StackNavigationProp } from '@react-navigation/stack';
+import type {DrawerNavigationProp} from '@react-navigation/drawer';
+import type {FC} from 'react';
+import type {StackNavigationProp} from '@react-navigation/stack';
 
 export interface User {
   displayName: string;
@@ -13,7 +12,7 @@ export interface User {
 
 type StackParamList = {
   default: undefined;
-  Intro: { userId: string };
+  Intro: {userId: string};
   Temp: undefined;
   StackNavigator: undefined;
   DrawerNavigator: undefined;
@@ -40,4 +39,4 @@ interface IconProps {
   children?: never;
 }
 
-export type IconType = SFC<IconProps>;
+export type IconType = FC<IconProps>;

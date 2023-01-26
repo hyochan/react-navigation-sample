@@ -1,10 +1,10 @@
-import type { ReactElement } from 'react';
+import type {ReactElement} from 'react';
 import React from 'react';
 
 import Button from '../shared/Button';
-import type { DefaultDrawerNavigationProps } from '../../types';
+import type {DefaultDrawerNavigationProps} from '../../types';
 import styled from 'styled-components/native';
-import { useNavigation } from '@react-navigation/core';
+import {useNavigation} from '@react-navigation/core';
 
 const Container = styled.View`
   flex: 1;

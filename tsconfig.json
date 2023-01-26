@@ -2,5 +2,21 @@
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
     "types": ["@types/styled-components-react-native"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "skipBabel": true
+      }
+    }
   }
 }

@@ -17,6 +17,7 @@
     "@react-navigation/material-top-tabs": "^6.5.2",
     "@react-navigation/native": "^6.1.2",
     "@react-navigation/native-stack": "^6.9.8",
+    "@react-navigation/stack": "^6.3.11",
     "dooboo-ui": "^0.1.100",
     "i18n-js": "^4.2.2",
     "react": "18.2.0",
@@ -39,7 +40,7 @@
     "@react-native-community/eslint-config": "^3.0.0",
     "@testing-library/react-native": "^11.5.0",
     "@tsconfig/react-native": "^2.0.2",
-    "@types/jest": "^29.2.1",
+    "@types/jest": "^29.4.0",
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
     "@types/styled-components-react-native": "^5.2.1",
@@ -51,9 +52,7 @@
     "metro-react-native-babel-preset": "0.73.7",
     "prettier": "^2.4.1",
     "react-test-renderer": "18.2.0",
+    "ts-jest": "^29.0.5",
     "typescript": "4.8.4"
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }

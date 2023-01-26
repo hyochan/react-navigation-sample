@@ -8,15 +8,15 @@ import DrawerNavigator from './DrawerNavigator';
 import Intro from '../screen/Intro';
 import MaterialBottomTabNavigator from './MaterialBottomTabNavigator';
 import MaterialTopTabNavigator from './MaterialTopTabNavigator';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import StackNavigator from './StackNavigator';
-import { useThemeContext } from '../../providers/ThemeProvider';
+import {useThemeContext} from '../../providers/ThemeProvider';
 
 const Stack = createNativeStackNavigator();
 
 function RootNavigator(): React.ReactElement {
-  const { theme } = useThemeContext();
+  const {theme} = useThemeContext();
 
   return (
     <NavigationContainer>
@@ -25,10 +25,9 @@ function RootNavigator(): React.ReactElement {
           headerStyle: {
             backgroundColor: theme.background,
           },
-          headerTitleStyle: { color: theme.fontColor },
+          headerTitleStyle: {color: theme.fontColor},
           headerTintColor: theme.tintColor,
-        }}
-      >
+        }}>
         <Stack.Screen name="Intro" component={Intro} />
         <Stack.Screen name="StackNavigator" component={StackNavigator} />
         <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />

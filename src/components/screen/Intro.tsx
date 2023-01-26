@@ -1,14 +1,14 @@
 import Button from '../shared/Button';
-import type { DefaultNavigationProps } from '../../types';
+import type {DefaultNavigationProps} from '../../types';
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import styled from 'styled-components/native';
 
 const Container = styled.View`
   flex: 1;
   align-self: stretch;
   overflow: scroll;
-  background-color: ${({ theme }): string => theme.background};
+  background-color: ${({theme}): string => theme.background};
 
   flex-direction: column;
   justify-content: flex-start;
@@ -32,7 +32,7 @@ function Intro(props: Props): React.ReactElement {
   return (
     <Container>
       <ButtonWrapper>
-        <View style={{ marginTop: 8 }} />
+        <View style={{marginTop: 8}} />
         <Button
           testID="btnStack"
           style={{
